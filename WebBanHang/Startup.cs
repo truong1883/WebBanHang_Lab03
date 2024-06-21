@@ -27,6 +27,8 @@ namespace WebBanHang
         {
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("name=DefaultConnection"));
+            services.AddDefaultIdentity<IUser>().AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddRazorPages();
             services.AddSession();
         }
 

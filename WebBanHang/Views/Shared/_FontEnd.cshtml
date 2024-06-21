@@ -27,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link" asp-action="Index" asp-controller="Category" asp-area="Admin">Category</a></li>
                     <li class="nav-item"><a class="nav-link" asp-action="Index" asp-controller="Product" asp-area="Admin">Product</a></li>
                 </ul>
-                <form class="d-flex" asp-controller="Cart"  asp-action="Index" asp-area="Customer">
+                <form class="d-flex" asp-controller="Cart" asp-action="Index" asp-area="Customer">
                     <button class="btn btn-outline-dark" type="submit">
                         <i class="bi-cart-fill me-1"></i>
                         Cart
@@ -59,6 +59,6 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script src="/js/site.js"></script>
-
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
